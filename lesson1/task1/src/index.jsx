@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Counter from './Counter';
-import './index.scss'
+import App from './App';
+import './index.scss';
 
-ReactDOM.render(<Counter />, document.querySelector('#root'));
+ReactDOM.render(<App />, document.querySelector('#root'));
