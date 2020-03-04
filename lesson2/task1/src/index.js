@@ -5,25 +5,25 @@ const DECREMENT = 'COUNTER/DECREMENT';
 
 export const increment = () => {
     return {
-        type: INCREMENT,
+        type: 'INCREMENT',
     };
 };
 
 export const decrement = () => {
     return {
-        type: DECREMENT,
+        type: 'DECREMENT',
     };
 };
 
 const counterReducer = (state = 0, action) => {
     switch (action.type) {
-        case INCREMENT:
+        case 'INCREMENT':
             return state + 1;
-        case DECREMENT:
+        case 'DECREMENT':
             return state - 1;
         default:
             return state;
     }
 };
 
-export const store = createStore(counterReducer);
+const store = createStore(counterReducer);
