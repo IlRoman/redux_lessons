@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { userInfo, UserContext } from './themes-context';
 import Header from './Header';
 
-class App extends Component {
+class App extends React.Component {
     state = {
         userData: userInfo,
     };
