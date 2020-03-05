@@ -1,5 +1,5 @@
 import store from './store';
-import { addUser, deleteUser } from './users/actions';
+import { addUser, deleteUser } from './users.actions';
 
 const start = () => {
     store.subscribe(() => console.log(store.getState()));
