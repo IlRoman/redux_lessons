@@ -1,6 +1,6 @@
 import store from './store';
 import { removeUser, setUser } from './user.actions';
-import { changeLanguage } from './language.actions';
+import { setLanguage } from './language.actions';
 import { removeProduct, addProduct } from './cart.actions';
 
 const test = () => {
@@ -10,7 +10,7 @@ const test = () => {
     store.dispatch(removeProduct(1));
     store.dispatch(setUser({ name: 'Roman' }));
     store.dispatch(removeUser());
-    store.dispatch(changeLanguage('ru'))
+    store.dispatch(setLanguage('ru'))
 }
 
 test();
