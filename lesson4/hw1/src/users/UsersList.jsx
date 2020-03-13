@@ -2,15 +2,15 @@ import React from 'react';
 import User from './User';
 import Pagination from './Pagination';
 import { connect } from 'react-redux';
-import { nextPage, prevPage } from './user.actions.js';
+import { goPrev, goNext } from './user.actions.js';
 
-const UsersList = ({ users, currentPage, nextPage, prevPage }) => {
+const UsersList = ({ users, currentPage, goNext, goPrev }) => {
 
     return (
         <>
             <Pagination
-                prevPage={prevPage}
-                nextPage={nextPage}
+                goPrev={goPrev}
+                goNext={goNext}
                 currentPage={currentPage}
                 totalItems={users.length}
             />
@@ -31,8 +31,8 @@ const mapState = state => {
 };
 
 const mapDispatch = {
-    nextPage,
-    prevPage
+    goNext,
+    goPrev
 }
 
 export default connect(mapState, mapDispatch)(UsersList);
