@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getWeatherData } from './weather.actions';
 
-const Weather = ({ dataList, data }) => {
+const Weather = ({ dataList, getWeatherData }) => {
     useEffect(() => {
-        data();
+        getWeatherData();
     }, []);
 
     return (
@@ -29,7 +29,7 @@ const mapState = state => {
 };
 
 const mapDisptch = {
-    data: getWeatherData,
+    getWeatherData,
 }
 
 export default connect(mapState, mapDisptch)(Weather);
